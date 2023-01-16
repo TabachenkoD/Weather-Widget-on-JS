@@ -1,0 +1,424 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+input[type="text"]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type="text"]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid grey;
+  -webkit-text-fill-color: black;
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+body {
+  background-color: #4299e1;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 50px;
+}
+
+.wrapper form {
+  padding-left: 23px;
+  padding-bottom: 60px;
+}
+
+.wrapper form label {
+  display: block;
+  padding: 5px 2px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 576px) {
+  .wrapper form label {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) {
+  .wrapper form label {
+    font-size: 22px;
+  }
+}
+
+.wrapper form input {
+  z-index: 1;
+  padding: 10px 40px 10px 20px;
+  font-size: 14px;
+  min-width: 275px;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+@media (min-width: 576px) {
+  .wrapper form input {
+    min-width: 460px;
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) {
+  .wrapper form input {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 992px) {
+  .wrapper form input {
+    min-width: 550px;
+  }
+}
+
+.wrapper form button {
+  cursor: pointer;
+  position: relative;
+  left: -30px;
+  top: 2px;
+  background-color: white;
+  color: grey;
+  font-size: 24px;
+  font-weight: 700;
+  z-index: 2;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+  will-change: color;
+}
+
+.wrapper form button:hover {
+  color: black;
+}
+
+@media (min-width: 768px) {
+  .wrapper form button {
+    font-size: 32px;
+    left: -34px;
+  }
+}
+
+@media (min-width: 992px) {
+  .wrapper form button {
+    font-size: 36px;
+    top: 4px;
+    left: -36px;
+  }
+}
+
+.wrapper .weatherWidget {
+  max-width: 275px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #2d3748;
+  margin: 0 23px;
+  margin-bottom: 50px;
+}
+
+.wrapper .weatherWidget .mainInfo {
+  background-color: #1a202c;
+  color: white;
+  padding: 10px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 1px;
+}
+
+.wrapper .weatherWidget .mainInfo .degrees h1 {
+  font-size: 24px;
+  font-weight: 700;
+  padding-bottom: 15px;
+}
+
+.wrapper .weatherWidget .mainInfo .degrees h2 {
+  font-size: 16px;
+}
+
+@media (min-width: 576px) {
+  .wrapper .weatherWidget .mainInfo .degrees h1 {
+    font-size: 32px;
+  }
+  .wrapper .weatherWidget .mainInfo .degrees h2 {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .wrapper .weatherWidget .mainInfo .degrees h1 {
+    font-size: 40px;
+  }
+  .wrapper .weatherWidget .mainInfo .degrees h2 {
+    font-size: 22px;
+  }
+}
+
+.wrapper .weatherWidget .mainInfo .geo {
+  padding: 0 10px;
+  font-size: 16px;
+}
+
+.wrapper .weatherWidget .mainInfo .geo .clouds {
+  padding-bottom: 15px;
+}
+
+@media (min-width: 576px) {
+  .wrapper .weatherWidget .mainInfo .geo {
+    font-size: 20px;
+  }
+  .wrapper .weatherWidget .mainInfo .geo .clouds {
+    padding-bottom: 25px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .wrapper .weatherWidget .mainInfo .geo {
+    font-size: 22px;
+  }
+  .wrapper .weatherWidget .mainInfo .geo .clouds {
+    padding-bottom: 0;
+    text-align: left;
+  }
+}
+
+.wrapper .weatherWidget .mainInfo .mainImg {
+  width: 100px;
+  height: 100px;
+}
+
+.wrapper .weatherWidget .mainInfo .mainImg img {
+  max-width: 100%;
+}
+
+@media (min-width: 576px) {
+  .wrapper .weatherWidget .mainInfo {
+    padding: 20px 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .wrapper .weatherWidget .mainInfo {
+    padding: 20px 40px;
+  }
+}
+
+.wrapper .weatherWidget .weekInfo {
+  padding: 10px 10px;
+  font-size: 16px;
+  color: white;
+}
+
+.wrapper .weatherWidget .weekInfo .dayTablet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .weatherWidget .weekInfo .dayTablet .day {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 25%;
+          flex: 0 1 25%;
+}
+
+.wrapper .weatherWidget .weekInfo .dayTablet .dayImg {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 25%;
+          flex: 0 1 25%;
+}
+
+.wrapper .weatherWidget .weekInfo .dayTablet .cloudsOnWeek {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 25%;
+          flex: 0 1 25%;
+  text-align: center;
+}
+
+.wrapper .weatherWidget .weekInfo .dayTablet .degreesOnWeek {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 25%;
+          flex: 0 1 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wrapper .weatherWidget .weekInfo .dayTablet .degreesOnWeek p:first-child {
+  padding-bottom: 10px;
+}
+
+@media (min-width: 576px) {
+  .wrapper .weatherWidget .weekInfo .dayTablet .degreesOnWeek {
+    padding-left: 35px;
+  }
+}
+
+@media (min-width: 992px) {
+  .wrapper .weatherWidget .weekInfo .dayTablet .degreesOnWeek {
+    padding-left: 45px;
+  }
+}
+
+@media (min-width: 576px) {
+  .wrapper .weatherWidget .weekInfo {
+    padding: 20px 20px;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .wrapper .weatherWidget .weekInfo {
+    padding: 20px 40px;
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 576px) {
+  .wrapper .weatherWidget {
+    min-width: 460px;
+  }
+}
+
+@media (min-width: 992px) {
+  .wrapper .weatherWidget {
+    min-width: 550px;
+  }
+}
